@@ -1,2 +1,2 @@
 # Heartheal_frontend
-The Frontend of our project
+The backend of our project
