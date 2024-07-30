@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #d9d9d9;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+
+.Quick h2,
+.Services h2,
+.Contact h2,
+.Follow h2 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    font-style: italic;
+    font-family: "Inter-MediumItalic", sans-serif;
+}
+
+.Quick,
+.Services,
+.Contact,
+.Follow {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    font-family: "Inter-ExtraLightItalic", sans-serif;
+}
+
+.Quick a,
+.Services a,
+.Contact a,
+.Follow a {
+    text-decoration: none;
+    color: #000000;
+}
