@@ -51,19 +51,23 @@ This is the backend for the Heartheal application, which facilitates communicati
     - Request Body: 
         ```json
         {
-            "FirstName": "John",
-            "LastName": "Doe",
-            "Email": "john.doe@example.com",
-            "Password": "password123"
+            "username": "Umutoni20",
+            "first_name": "Ange",
+            "last_name": "Umutoni",
+            "email": "umutange1@example.com",
+            "password": "password123",
+            "role": "user"
         }
         ```
     - Response: 
         ```json
         {
             "id": 1,
-            "FirstName": "John",
-            "LastName": "Doe",
-            "Email": "john.doe@example.com"
+            "username": "Umutoni20"
+            "first_name": "Ange",
+            "last_name": "Umutoni",
+            "email": "umutange1@example.com"
+            "role": "user"
         }
         ```
 
@@ -74,21 +78,21 @@ This is the backend for the Heartheal application, which facilitates communicati
     - Request Body: 
         ```json
         {
-            "Age": 30,
-            "Gender": "Male",
-            "ContactNo": "1234567890",
-            "Address": "123 Main St",
-            "user_id": 1
+            "user_id": 1.
+            "age": 30,
+            "gender": "Male",
+            "contact_no": "1234567890",
+            "address": "123 Main St"
         }
         ```
     - Response: 
         ```json
         {
             "id": 1,
-            "Age": 30,
-            "Gender": "Male",
-            "ContactNo": "1234567890",
-            "Address": "123 Main St",
+            "age": 30,
+            "gender": "Male",
+            "contact_no": "1234567890",
+            "address": "123 Main St",
             "user_id": 1
         }
         ```
@@ -100,9 +104,9 @@ This is the backend for the Heartheal application, which facilitates communicati
     - Request Body: 
         ```json
         {
-            "LicenseNo": 12345,
+            "license_no": 12345,
             "specialization": "Psychology",
-            "YearsOfExperience": 10,
+            "years_of_experience": 10,
             "bio": "Experienced therapist.",
             "user_id": 1
         }
@@ -111,9 +115,9 @@ This is the backend for the Heartheal application, which facilitates communicati
         ```json
         {
             "id": 1,
-            "LicenseNo": 12345,
+            "license_no": 12345,
             "specialization": "Psychology",
-            "YearsOfExperience": 10,
+            "years_of_experience": 10,
             "bio": "Experienced therapist.",
             "user_id": 1
         }
@@ -126,19 +130,19 @@ This is the backend for the Heartheal application, which facilitates communicati
     - Request Body: 
         ```json
         {
-            "PatientsId": 1,
-            "DateAndTime": 1627849200,
-            "Status": "Pending",
-            "patient_id": 1
+            "id": 1,
+            "patient_id": 1,
+            "date_and_time": 1627849200,
+            "status": "Pending" 
         }
         ```
     - Response: 
         ```json
         {
             "id": 1,
-            "PatientsId": 1,
-            "DateAndTime": 1627849200,
-            "Status": "Pending",
+            "patient_id": 1,
+            "date-and_time": 1627849200,
+            "status": "Pending",
             "patient_id": 1
         }
         ```
