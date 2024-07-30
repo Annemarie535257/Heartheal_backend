@@ -36,8 +36,8 @@ class AppResponseModelTestCase(unittest.TestCase):
         """
         Test app response creation and attribute assignment.
         """
-        # Create user, therapist, and patient
-        user_therapist = UserModel(
+        # Create user, therapist, patient, and app request
+        user = UserModel(
             username="umutoniange",
             first_name="Ange",
             last_name="Umutoni",
@@ -45,53 +45,41 @@ class AppResponseModelTestCase(unittest.TestCase):
             password="password123",
             role="therapist"
         )
-        db.session.add(user_therapist)
+        db.session.add(user)
         db.session.commit()
 
         therapist = TherapistModel(
+            user_id=user.id,
             license_no=123456,
-            specialization="Clinical Psychology",
+            specialization="Psychotherapy",
             years_of_experience=10,
-            bio="Experienced clinical psychologist with over a decade of practice.",
-            user_id=user_therapist.id
+            bio="Experienced therapist"
         )
         db.session.add(therapist)
         db.session.commit()
 
-        user_patient = UserModel(
-            username="umutoniange2",
-            first_name="Ange",
-            last_name="Umutoni",
-            email="umutange1+1@gmail.com",
-            password="password123",
-            role="patient"
-        )
-        db.session.add(user_patient)
-        db.session.commit()
-
         patient = PatientModel(
             age=30,
-            gender="Male",
+            gender="Female",
             contact_no=1234567890,
             address="123 Main St",
-            user_id=user_patient.id
+            user_id=user.id
         )
         db.session.add(patient)
         db.session.commit()
 
-        # Create appointment request
         app_request = AppRequestModel(
             patient_id=patient.id,
-            date_and_time=1627843200000,  # Example timestamp
+            date_and_time=1625256000,
             status="pending"
         )
         db.session.add(app_request)
         db.session.commit()
 
-        # Create appointment response
+        # Create app response
         app_response = AppResponseModel(
             therapist_id=therapist.id,
-            date=1627929600000,  # Example timestamp
+            date=1625266000,
             app_request_id=app_request.id
         )
         db.session.add(app_response)
@@ -102,13 +90,71 @@ class AppResponseModelTestCase(unittest.TestCase):
         
         self.assertIsNotNone(retrieved_app_response)
         self.assertEqual(retrieved_app_response.therapist_id, therapist.id)
-        self.assertEqual(retrieved_app_response.date, 1627929600000)
+        self.assertEqual(retrieved_app_response.date, 1625266000)
         self.assertEqual(retrieved_app_response.app_request_id, app_request.id)
 
     def test_app_response_relationships(self):
         """
         Test the relationships of app response with therapist and appointment request.
         """
-        # Create user, therapist, and patient
-        user_
+        # Create user, therapist, patient, and app request
+        user = UserModel(
+            username="umutoniange",
+            first_name="Ange",
+            last_name="Umutoni",
+            email="umutange1@gmail.com",
+            password="password123",
+            role="therapist"
+        )
+        db.session.add(user)
+        db.session.commit()
+
+        therapist = TherapistModel(
+            user_id=user.id,
+            license_no=123456,
+            specialization="Psychotherapy",
+            years_of_experience=10,
+            bio="Experienced therapist"
+        )
+        db.session.add(therapist)
+        db.session.commit()
+
+        patient = PatientModel(
+            age=30,
+            gender="Female",
+            contact_no=1234567890,
+            address="123 Main St",
+            user_id=user.id
+        )
+        db.session.add(patient)
+        db.session.commit()
+
+        app_request = AppRequestModel(
+            patient_id=patient.id,
+            date_and_time=1625256000,
+            status="pending"
+        )
+        db.session.add(app_request)
+        db.session.commit()
+
+        # Create app response
+        app_response = AppResponseModel(
+            therapist_id=therapist.id,
+            date=1625266000,
+            app_request_id=app_request.id
+        )
+        db.session.add(app_response)
+        db.session.commit()
+
+        # Retrieve the app response from the database
+        retrieved_app_response = AppResponseModel.query.filter_by(id=app_response.id).first()
+        
+        self.assertIsNotNone(retrieved_app_response)
+        self.assertEqual(retrieved_app_response.therapist_id, therapist.id)
+        self.assertEqual(retrieved_app_response.app_request_id, app_request.id)
+        self.assertEqual(retrieved_app_response.therapist.id, therapist.id)
+        self.assertEqual(retrieved_app_response.app_request.id, app_request.id)
+
+if __name__ == '__main__':
+    unittest.main()
 
