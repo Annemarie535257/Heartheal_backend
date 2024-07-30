@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #d9d9d9;
+}
+
+section {
+    display: flex;
+}
+
+section img {
+    height: 100vh;
+    width: 996px;
+}
+
+.about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 6;
+}
+
+.about-us h1 {
+    font-family: "Inter-LightItalic", sans-serif;
+    font-size: 6.4rem;
+    font-weight: 300;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 5rem;
+    margin-top: 6rem;
+}
+
+span {
+    color: #ffffff;
+    font-weight: 700;
+    font-family: "Inter-BoldItalic", sans-serif;
+}
+
+.about-us h3 {
+    text-align: left;
+    font-family: "Inter-SemiBold", sans-serif;
+    font-size: 4.8rem;
+    font-weight: 500;
+    margin-bottom: 5rem;
+}
+
+.about-us p {
+    color: #000000;
+    font-family: "Inter-Light", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    max-width: 94.4%;
+    line-height: 3.4rem;
+    margin-bottom: 5rem;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    background: #2cadca;
+    color: #ffffff;
+    border: 0.05rem solid #000000;
+    font-size: 4rem;
+    font-weight: 300;
+    width: 40%;
+    height: 6.9rem;
+    border-radius: 5rem;
+    font-style: italic;
+    font-family: "Inter-LightItalic", sans-serif;
+}
