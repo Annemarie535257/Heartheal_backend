@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Appointment</title>
+    <link rel="stylesheet" href="dashj.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+</head>
+<body>
+    <input type="checkbox" id="check">
+    <header>
+        <label for="check">
+            <i class="fas fa-bars" id="side-btn"></i>
+        </label>
+        <div class="left">
+            <a href="dashj.html"><h3><span>HeartHeal</span></h3></a>
+        </div>
+        <div class="right">
+            <a class="logout-btn" href="#"><span>Log Out</span></a>
+        </div>
+    </header>
+    <div class="sidebar">
+        <a href="consult.html"><img src="cons.jpg" alt="Consultation" /><span>Consultation</span></a>
+        <a href="midt.html"><img src="meditation.jpg" alt="Meditation" /><span>Meditation</span></a>
+        <a href="mindfulness.html"><img src="mindfulness.jpg" alt="Mindfulness" /><span>Mindfulness</span></a>
+        <a href="groups.html"><img src="groups.jpg" alt="Groups" /><span>Groups</span></a>
+        <a href="settings.html"><img src="ww.jpg" alt="Groups" /><span>Settings</span></a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align:center; color: lightblue;"><br>Book an Appointment</h1><br>
+            <div class="col" style="text-align:center">
+                <form id="booking-form" class="centered-form">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" class="input-field" required>
+                    
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" class="input-field" required>
+                    
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" class="input-field" required>
+                    
+                    <label for="time">Preferred Time:</label>
+                    <input type="time" id="time" name="time" class="input-field" required>
+                    
+                    <label for="therapist">Select Therapist:</label>
+                    <select id="therapist" name="therapist" class="input-field" required>
+                        <option value="therapist1">Therapist 1</option>
+                        <option value="therapist2">Therapist 2</option>
+                        <option value="therapist3">Therapist 3</option>
+                        <!-- Add more therapists as needed -->
+                    </select>
+                    
+                    <button type="submit" class="submit-btn">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            const therapist = document.getElementById('therapist').value;
+            
+            // Handle form data here (e.g., send to a server or show a confirmation message)
+            alert(`Appointment booked for ${name} on ${date} at ${time} with ${therapist}.`);
+        });
+    </script>
+</body>
+</html>
