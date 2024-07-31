@@ -1,0 +1,193 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #102C57;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Align items vertically in the header */
+    justify-content: space-between; /* Space between logo and button */
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure header is on top of other elements */
+}
+
+.navigation {
+    display: flex;
+    align-items: center; 
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+.logo {
+    flex: 1; 
+}
+
+.logo img {
+    height: 15vh; 
+}
+
+nav {
+    display: flex;
+    flex: 2; /* Takes up remaining space between logo and button */
+    justify-content: center; /* Center navigation links */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 40px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* White color for better contrast */
+    font-weight: 500;
+    font-size: 1.2rem; /* Increased font size */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+nav ul li a:hover {
+    color: #4C3BCF; /* Highlight color on hover */
+}
+
+.navigation-button {
+    background-color: white; /* White background */
+    color: #4C3BCF; /* Text color */
+    padding: 10px 20px; /* Padding around the text */
+    border: 2px solid white; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.navigation-button:hover {
+    background-color: #4C3BCF; /* Button background color on hover */
+    color: white; /* Text color on hover */
+    border-color: white; /* Border color on hover */
+}
+
+.footer {
+    background: #102C57;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer div {
+    flex: 1;
+    max-width: 200px;
+}
+
+.footer h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer p, .footer a {
+    color: #ccc;
+    font-size: 0.9rem;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.copy-symbol {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 10px;
+}
+
+
+.section1 {
+    background-image: url('your-background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.paragraph {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.mission_vision_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background: #f0f0f0; 
+}
+
+.mission_vision_wrapper {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mission_box, .vision_box {
+    flex: 1;
+    padding: 30px;
+    background: linear-gradient(135deg, #8ec5fc, #BBE9FF); 
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.mission_box:hover, .vision_box:hover {
+    transform: translateY(-10px);
+}
+
+.box_heading {
+    font-size: 2.5rem;
+    color: #333; 
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
+} 
+
+.box_paragraph {
+    font-size: 1.2rem;
+    color: #555; 
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); 
+}

@@ -12,7 +12,7 @@ from db import db
 from models import UserModel
 from schemas import UserSchema
 from flask import jsonify
-
+from flask import render_template
 
 blp = Blueprint(
     "users",
@@ -20,6 +20,10 @@ blp = Blueprint(
     description="Operations on users"
 )
 
+@blp.route("/")
+class Home(MethodView):
+    def get(self):
+        return render_template("index.html")
 @blp.route("/register")
 class UserRegister(MethodView):
     @blp.arguments(UserSchema)
