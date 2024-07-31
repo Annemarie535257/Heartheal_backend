@@ -1,0 +1,77 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #d9d9d9;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+span {
+    font-weight: 700;
+    color: #ffffff;
+    font-family: "Inter-BoldItalic", sans-serif;
+    font-style: italic;
+}
+
+.Client h1 {
+    text-align: center;
+    font-size: 6rem;
+    font-weight: 400;
+    margin-top: 8rem;
+    font-family: "Inter-Regular", sans-serif;
+}
+
+
+.Review {
+    display: flex;
+    justify-content: space-around;
+}
+
+.Review-Section {
+    width: 44rem;
+    height: 55rem;
+    background: #f9f6f3;
+    box-shadow: inset 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border: 0.05rem solid black;
+}
+
+.Doe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2cadca;
+    height: 24rem;
+}
+
+.Doe h3  {
+    font-family: "Inter-SemiBoldItalic", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 2.6rem;
+    margin-top: 1rem;
+}
+
+.Comment {
+    font-family: "InriaSerif-LightItalic", sans-serif;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 2.3rem;
+    width: 38.2rem;
+    margin-left: 3rem;
+    margin-top: 4rem;
+}
