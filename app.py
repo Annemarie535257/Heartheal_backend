@@ -71,7 +71,7 @@ def create_app(db_url=None):
     app.config["JWT_SECRET_KEY"] = "not-so-secret"
 
     # Register the blueprints
-    api.register_blueprint(UserBlp, url_prefix='/users')
+    api.register_blueprint(UserBlp)
     api.register_blueprint(PatientBlp)
     api.register_blueprint(TherapistBlp)
     api.register_blueprint(AppRequestBlp)
@@ -86,6 +86,18 @@ def create_app(db_url=None):
     @app.route('/service')
     def service():
         return render_template('service.html')
+    
+    @app.route('/contact')
+    def contact():
+        return render_template('contact.html')
+    
+    @app.route('/signup')
+    def signup():
+        return render_template('SignUp.html')
+    
+    @app.route('/login')
+    def login():
+        return render_template('Login.html')
     
     @app.route('/dashboard')
     def dash():

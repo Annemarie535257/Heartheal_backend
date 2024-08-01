@@ -191,3 +191,39 @@ nav ul li a:hover {
     line-height: 1.6;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); 
 }
+
+.about-us {
+    display: flex;
+    align-items: stretch;
+    justify-content: center; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-content {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 10px;
+    flex: 1;
+    margin-right: 1rem; /* Space between text and image */
+}
+
+.text-content h1 {
+    margin-top: 0;
+}
+
+.text-content h1 span {
+    color: blue;
+}
+
+.text-content p {
+    margin-bottom: 1rem;
+}
+
+
+.doctor {
+    width: 35%; 
+    height:25%;
+    object-fit: cover;
+    border-radius: 10px;
+}
