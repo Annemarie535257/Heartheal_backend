@@ -14,14 +14,14 @@
     <header>
         <div class="navigation">
             <div class="logo">
-                <img src="use-now.png" alt="Logo">
+                <img src="{{ url_for('static', filename='images/use-now.png') }}" alt="Logo">
             </div>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/service">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
             <a href="Login.html" class="navigation-button">Get Started</a>
@@ -30,65 +30,47 @@
     
     <main class="homepage">
         <section>
-            <h1 class="header" style="color: blue;">Our<br><span class="sub-header">Services</span></h1>
-
-            <div class="wrapper">
-            <div class="shape-outer first-shape-outer">
-                <div class="shape-inner first-shape-inner"></div>  
-            </div>
-            <div class="text-wrapper">
-                <h3>Wellness Programs</h3>
+            <h3>Our Services</h3>
+            <div class="services-grid">
+              <div class="service service1">
+                <i class="ti-bar-chart"></i>
+                <h4>Wellness Programs</h4>
                 <p>Our wellness programs promote holistic health by integrating fitness, nutrition, and mindfulness practices. Achieve balance and rejuvenate your lifestyle with personalized support and expert guidance tailored to your needs.</p>
-            </div>
-            </div>
-
-            <div class="wrapper">
-            <div class="shape-outer second-shape-outer">
-                <div class="shape-inner second-shape-inner"></div>
-            </div>
-            <div class="text-wrapper aggressor-text">
-                <h3>Meditation</h3>
-                <p>Discover tranquility with our meditation guide, designed to calm the mind and rejuvenate the spirit. Experience mindfulness through guided practices that cultivate relaxation, focus, and emotional resilience.</p>
-            </div>
-            </div>
-
-            <div class="wrapper">
-            <div class="shape-outer third-shape-outer">
-                <div class="shape-inner third-shape-inner"></div>
-            </div>
-            <div class="text-wrapper evader-text">
-                <h3>Consultation</h3>
-                <p>Our consultation services offer personalized strategies for healthier lifestyles. Receive expert advice on dietary changes, fitness plans, and stress management to enhance your quality of life and well-being.</p>
-            </div>
-            </div>
-
-            
-            <div class="wrapper">
-            <div class="shape-outer fifth-shape-outer">
-                <div class="shape-inner fifth-shape-inner"></div>
-            </div>
-            <div class="text-wrapper pushover-text">
-                <h3>Educational Resources</h3>
-                <p>Access educational resources like cheat sheets and guides to support your wellness journey. Empower yourself with knowledge to make informed decisions and achieve lasting positive lifestyle changes.</p>
-            </div>
-            </div>
-
-            <div class="wrapper">
-            <div class="shape-outer sixth-shape-outer">
-                <div class="shape-inner sixth-shape-inner"></div>
-            </div>
-            <div class="text-wrapper">
-                <h3>Support Groups</h3>
-                <p>Join our support groups to connect with others on similar wellness journeys. Share experiences in a safe, understanding environment, fostering community and encouragement along your personal path.</p>
-            </div>
-            </div>
-
-        </section>
+                <a href="Login.html" class="cta">Read More <span class="ti-angle-right"></a>
+              </div>
           
+              <div class="service service2">
+                <i class="ti-light-bulb"></i>
+                <h4>Mindful Meditation</h4>
+                <p>Discover tranquility with our meditation guide, designed to calm the mind and rejuvenate the spirit. Experience mindfulness through guided practices that cultivate relaxation, focus, and emotional resilience.</p>
+                <a href="Login.html" class="cta">Read More <span class="ti-angle-right"></a>
+              </div>
+          
+              <div class="service service3">
+                <i class="ti-money"></i>
+                <h4>Consultation</h4>
+                <p>Our consultation services offer personalized strategies for healthier lifestyles. Receive expert advice on dietary changes, fitness plans, and stress management to enhance your quality of life and well-being.</p>
+                <a href="Login.html" class="cta">Read more <span class="ti-angle-right"></span></a>
+              </div>
+            </div>
+            <div class="services-grid">
+                <div class="service service1">
+                  <i class="ti-bar-chart"></i>
+                  <h4>Educational Resources</h4>
+                  <p>Access educational resources like cheat sheets and guides to support your wellness journey. Empower yourself with knowledge to make informed decisions and achieve lasting positive lifestyle changes.</p>
+                  <a href="Login.html" class="cta">Read More <span class="ti-angle-right"></a>
+                </div>
+            
+                <div class="service service2">
+                  <i class="ti-light-bulb"></i>
+                  <h4>Support Groups</h4>
+                  <p>Join our support groups to connect with others on similar wellness journeys. Share experiences in a safe, understanding environment, fostering community and encouragement along your personal path.</p>
+                  <a href="Login.html" class="cta">Read More <span class="ti-angle-right"></a>
+                </div>
+                <div></div>
+            </div>  
+          </section>
     </main>
-
-
-
     <footer class="footer">
         <section>
             <div class="Quick">
