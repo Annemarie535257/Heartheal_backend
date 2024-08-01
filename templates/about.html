@@ -14,13 +14,13 @@
     <header>
         <div class="navigation">
             <div class="logo">
-                <img src="use-now.png" alt="Logo">
+                <img src="{{ url_for('static', filename='images/use-now.png') }}" alt="Logo">
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="service.html">Services</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/service">Services</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
@@ -50,7 +50,7 @@
                         therapists and those seeking mental health support.
                     </p>
                 </div>
-                <img src="about-img.jpeg.jpg" class="doctor" alt="Doctor"/>
+                <img src="{{ url_for('static', filename='images/about-img.jpeg.jpg') }}" class="doctor" alt="Doctor"/>
             </div>
         </section>
         <h1 style="text-align:center">MEET THE TEAM</h1>
@@ -58,7 +58,7 @@
     
             <div class="demo__div people">
                 <div class="people__div people__div--img">
-                    <img src="anne.jpg" alt="" class="people__img">
+                    <img src="{{ url_for('static', filename='images/anne.jpg') }}" alt="" class="people__img">
                 </div>
                 <div class="people__div people__div--info">
                     <h2 class="people__name">Anne Marie Twagirayeza</h2>
@@ -86,7 +86,7 @@
             </div>       
             <div class="demo__div people">
                 <div class="people__div people__div--img">
-                    <img src="jolie.jpg" alt="" class="people__img">
+                    <img src="{{ url_for('static', filename='images/jolie.jpg') }}" alt="" class="people__img">
                 </div>
                 <div class="people__div people__div--info">
                     <h2 class="people__name">Jolie Umulisa</h2>
@@ -101,7 +101,7 @@
     
             <div class="demo__div people">
                 <div class="people__div people__div--img">
-                    <img src="oluchi.jpg" alt="" class="people__img">
+                    <img src="{{ url_for('static', filename='images/oluchi.jpg') }}" alt="" class="people__img">
                 </div>
                 <div class="people__div people__div--info">
                     <h2 class="people__name">Oluchi Nduka Aku</h2>
@@ -117,7 +117,7 @@
             
             <div class="demo__div people">
                 <div class="people__div people__div--img">
-                    <img src="teta.jpg" alt="" class="people__img">
+                    <img src="{{ url_for('static', filename='images/teta.jpg') }}" alt="" class="people__img">
                 </div>
                 <div class="people__div people__div--info">
                     <h2 class="people__name">Teta Bianca</h2>
