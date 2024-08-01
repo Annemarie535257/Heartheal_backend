@@ -12,53 +12,13 @@ from models import UserModel
 from schemas import UserSchema
 from flask import jsonify
 from flask import render_template
+from flask import redirect
 
 blp = Blueprint(
     "users",
     __name__,
     description="Operations on users"
 )
-
-# @blp.route("/")
-# class Home(MethodView):
-#     def get(self):
-#         return render_template("index.html")
-    
-# @blp.route('/about')
-# def about():
-#     return render_template('about.html')
-
-# @blp.route('/services')
-# def services():
-#     return render_template('services.html')
-
-# @blp.route('/contact')
-# def contact():
-#     return render_template('contact.html')
-
-# @blp.route('/dashboard')
-# def dashboard():
-#     return render_template('dashboard.html')
-
-# @blp.route('/consult')
-# def consult():
-#     return render_template('consult.html')
-
-# @blp.route('/meditation')
-# def meditation():
-#     return render_template('midt.html')
-
-# @blp.route('/mindfulness')
-# def mindfulness():
-#     return render_template('mindfulness.html')
-
-# @blp.route('/groups')
-# def groups():
-#     return render_template('groups.html')
-
-# @blp.route('/settings')
-# def settings():
-#     return render_template('settings.html')
 
 @blp.route("/register")
 class UserRegister(MethodView):
@@ -93,6 +53,12 @@ class UserRegister(MethodView):
         user = UserModel(**user_data)
         db.session.add(user)
         db.session.commit()
+         # Redirect based on role
+        if user.role == 'therapist':
+            return redirect(url_for('therapist_dashboard'))
+        else:
+            return redirect(url_for('patient_dashboard'))
+        
 
         return jsonify({"message": "User created successfully."}),201
     
@@ -105,11 +71,13 @@ class UserRegister(MethodView):
             last_name=user_data["last_name"],
             email=user_data["email"],
             password=pbkdf2_sha256.hash(user_data["password"])
+
         )
         db.session.add(user)
         db.session.commit()
 
         return {"message": "User created successfully"}, 201
+    
 
 @blp.route("/login")
 class UserLogin(MethodView):
@@ -139,6 +107,12 @@ class UserLogin(MethodView):
 
         # Check the role of the user (adjust based on your app logic)
         role = "user"  # Example role assignment
+
+        # Redirect based on role
+        if user.role == 'therapist':
+            return redirect(url_for('therapist_dashboard'))
+        else:
+            return redirect(url_for('dashj.html'))
 
         return {
             "message": "Logged in successfully",
