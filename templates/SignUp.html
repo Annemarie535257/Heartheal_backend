@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/SignUp.css') }}">
+    <title>Sign Up</title>
+</head>
+<body>
+    
+    <form class="form">
+        <p class="title">Register</p>
+        <p class="message">We envision a world where technology bridges the gap between therapists and those seeking mental health support.</p>
+        <div class="flex">
+            <label>
+                <input class="input" type="text" placeholder="" required="">
+                <span>Firstname</span>
+            </label>
+    
+            <label>
+                <input class="input" type="text" placeholder="" required="">
+                <span>Lastname</span>
+            </label>
+        </div>  
+                
+        <label>
+            <input class="input" type="email" placeholder="" required="">
+            <span>Email</span>
+        </label> 
+        
+        <label>
+            <select class="input" required="">
+                <option value="" disabled selected>Select Role</option>
+                <option value="therapist">Therapist</option>
+                <option value="patient">Patient</option>
+            </select>
+            
+        </label>
+
+        <label>
+            <input class="input" type="password" placeholder="" required="">
+            <span>Password</span>
+        </label>
+        <label>
+            <input class="input" type="password" placeholder="" required="">
+            <span>Confirm password</span>
+        </label>
+        <button class="submit">Submit</button>
+        <p class="signin">Already have an account? <a href="/login">Signin</a> </p>
+    </form>
+    
+</body>
+</html>
