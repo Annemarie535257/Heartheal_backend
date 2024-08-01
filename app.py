@@ -10,6 +10,7 @@ from flask_smorest import Api # type: ignore
 from flask_jwt_extended import JWTManager # type: ignore
 from flask_migrate import Migrate # type: ignore
 from flask import jsonify # type: ignore
+from flask import render_template # type: ignore
 from db import db
 from resources.user import blp as UserBlp
 from resources.patient import blp as PatientBlp
@@ -70,11 +71,45 @@ def create_app(db_url=None):
     app.config["JWT_SECRET_KEY"] = "not-so-secret"
 
     # Register the blueprints
-    api.register_blueprint(UserBlp)
+    api.register_blueprint(UserBlp, url_prefix='/users')
     api.register_blueprint(PatientBlp)
     api.register_blueprint(TherapistBlp)
     api.register_blueprint(AppRequestBlp)
     api.register_blueprint(AppResponseBlp)
+
+    @app.route('/')
+    def home():
+        return render_template('index.html')
+    @app.route('/about')
+    def about():
+        return render_template('about.html')
+    @app.route('/service')
+    def service():
+        return render_template('service.html')
+    
+    @app.route('/dashboard')
+    def dash():
+        return render_template('dashj.html')
+
+    @app.route('/consult')
+    def consult():
+        return render_template('consult.html')
+
+    @app.route('/meditation')
+    def meditation():
+        return render_template('midt.html')
+
+    @app.route('/mindfulness')
+    def mindfulness():
+        return render_template('mindfulness.html')
+
+    @app.route('/groups')
+    def groups():
+        return render_template('groups.html')
+
+    @app.route('/settings')
+    def settings():
+        return render_template('settings.html')
 
     return app
 
