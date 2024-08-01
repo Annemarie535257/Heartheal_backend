@@ -7,7 +7,6 @@ from flask.views import MethodView
 from flask_smorest import Blueprint, abort
 from passlib.hash import pbkdf2_sha256
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt
-
 from db import db
 from models import UserModel
 from schemas import UserSchema
@@ -20,10 +19,47 @@ blp = Blueprint(
     description="Operations on users"
 )
 
-@blp.route("/")
-class Home(MethodView):
-    def get(self):
-        return render_template("index.html")
+# @blp.route("/")
+# class Home(MethodView):
+#     def get(self):
+#         return render_template("index.html")
+    
+# @blp.route('/about')
+# def about():
+#     return render_template('about.html')
+
+# @blp.route('/services')
+# def services():
+#     return render_template('services.html')
+
+# @blp.route('/contact')
+# def contact():
+#     return render_template('contact.html')
+
+# @blp.route('/dashboard')
+# def dashboard():
+#     return render_template('dashboard.html')
+
+# @blp.route('/consult')
+# def consult():
+#     return render_template('consult.html')
+
+# @blp.route('/meditation')
+# def meditation():
+#     return render_template('midt.html')
+
+# @blp.route('/mindfulness')
+# def mindfulness():
+#     return render_template('mindfulness.html')
+
+# @blp.route('/groups')
+# def groups():
+#     return render_template('groups.html')
+
+# @blp.route('/settings')
+# def settings():
+#     return render_template('settings.html')
+
 @blp.route("/register")
 class UserRegister(MethodView):
     @blp.arguments(UserSchema)
