@@ -24,7 +24,7 @@
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="Login.html" class="navigation-button">Get Started</a>
+            <a href="/signup" class="navigation-button">Get Started</a>
         </div>
     </header>
     
@@ -73,7 +73,7 @@
     
             <div class="demo__div people">
                 <div class="people__div people__div--img">
-                    <img src="https://codepen-chriscoyier-bucket.imgix.net/7.jpg" alt="" class="people__img">
+                    <img src="{{ url_for('static', filename='images/tama.jpg') }}" alt="" class="people__img">
                 </div>
                 <div class="people__div people__div--info">
                     <h2 class="people__name">Tamanda Kaunda</h2>
